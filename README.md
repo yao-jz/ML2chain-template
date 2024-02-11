@@ -30,7 +30,7 @@ After you get a model, you can fulfil other users' request for the model computa
 
 As a user, you can use similar codes as in [this file](src/utils/user.ipynb) to make your request to the coordinator contract. Users' requests include the input data, the model they want to run(modelId), the callback contract address, and the callback function in that contract.
 
-As a node operator, you can listen to other users' requests and fulfil the request using user-specified models. The node operator should use the specified model, compute on the given input, and send the output to the user-specified callback contract through the callback function.
+As a node operator, you can listen to other users' requests and fulfil the request using user-specified models. The node operator should use the specified model, compute on the given input, and send the output back to the coordinator.
 
 In this example, there are two contract, one is [Coordinator](https://sepolia.etherscan.io/address/0x1B42d9Ba11180Db82C5fd902a40D769987fF1c3B), and the other is [OutputCollector](https://sepolia.etherscan.io/address/0x7f8A0D82d1f14D0976bE8AaAb0C885e3Be154c43). They have been deployed on Sepolia. You can click the above link to interact with them. The source code for the contracts is in [src/contracts](src/contracts/).
 
@@ -39,7 +39,7 @@ The [Coordinator](src/contracts/coordinator.sol) contract will be responsible fo
 1. A user can call the `makeRequest` to upload a request to the coordinator. 
 2. Then, the coordinator will emit an event including the information in that request. (requestId, modelId, input, callbackContract and callbackFunction)
 3. Node operators keep listening for the event in the coordinator.
-4. Once it get the request, it should check whether the request is fulfilled. If not, the operator will run the model with that input, and generate an output.
+4. Once one operator get the request, it should check whether the request is fulfilled. If not, the operator will run the model with that input, and generate an output.
 5. The operator then sends the output back to the coordinator contract.
 6. The coordinator will call the callbackFunction in callbackContract specified by the user before.
 7. Finally, that request is fulfilled. 
@@ -58,6 +58,6 @@ How can users verify the node operator actually used the specified input to perf
 
 How can users verify the node operator actually used the model parameters or codes to perform the inference?
 
-Actually, users will know nothing about what the node operator is doing in this example, because the operator doesn't upload any kind of proof for their computation or storage. 
+Actually, users know nothing about what the node operator is doing in this example, because the operator doesn't upload any kind of proof for their computation or storage. 
 
 There are some related works of using ZK Proof or Fraud Proof to generate the proof for some ML computations. But many of them are still under development. We hope we can make it securer and computational feasible in the future.

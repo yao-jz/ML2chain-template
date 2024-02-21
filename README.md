@@ -10,6 +10,8 @@ You can brainstorm any use cases if you can bring ML computation on chain.
 
 ![Workflow](fig/workflow.png)
 
+Note: All interactions with blockchains are done with nodes (e.g. Infura) or api access (e.g. Etherscan).
+
 ## Motivation
 
 Bringing machine learning algorithms on chain is difficult. This is because many neural network based algorithms require lots of computation which is very expensive on EVM. If users want to deploy neural network code and model parameters on Ethereum, they need to pay a lot for smart contract storage and computation. Therefore, we deploy the neural network codes to off chain devices, where the local computer performs various vector computations and sends the results back to the chain.

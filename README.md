@@ -64,7 +64,7 @@ Actually, users know nothing about what the ML service node operator is doing in
 
 Some related works are using ZK Proof or Fraud Proof to generate the proof for some ML computations. But many of them are still under development. We hope we can make it more secure and computationally feasible in the future.
 
-References:
+## References:
 
 (ZK Proof)
 
@@ -75,5 +75,4 @@ References:
 (Optimistic Fraud Proof)
 
 4. [Arbitrum](https://arbitrum.io/) [Paper](https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-kalodner.pdf)
-
 5. [Optimism](https://www.optimism.io/)

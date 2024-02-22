@@ -65,11 +65,15 @@ Actually, users know nothing about what the ML service node operator is doing in
 Some related works are using ZK Proof or Fraud Proof to generate the proof for some ML computations. But many of them are still under development. We hope we can make it more secure and computationally feasible in the future.
 
 References:
+
 (ZK Proof)
+
 1. [A GitHub repository of zero-knowledge proof for machine learning](https://github.com/worldcoin/awesome-zkml)
 2. [Tianyi Liu et.al. zkCNN: Zero Knowledge Proofs for Convolutional Neural Network Predictions and Accuracy](https://eprint.iacr.org/2021/673)
-3. [Daniel Kang et.al. Scaling up Trustless DNN Inference with Zero-Knowledge Proofs](https://arxiv.org/abs/2210.08674) [GitHub Repo](https://github.com/ddkang/zkml)
+3. [Daniel Kang et.al. Scaling up Trustless DNN Inference with Zero-Knowledge Proofs](https://arxiv.org/abs/2210.08674)    [GitHub Repo](https://github.com/ddkang/zkml)
 
 (Optimistic Fraud Proof)
+
 4. [Arbitrum](https://arbitrum.io/) [Paper](https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-kalodner.pdf)
+
 5. [Optimism](https://www.optimism.io/)

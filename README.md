@@ -1,6 +1,6 @@
 # ML2chain-template
 
-A simple workflow template to develop ML models with on-chain data and interact with on-chain contracts using ML models. (Without any proof or verification)
+A simple workflow template to develop ML models with on-chain data and interact with on-chain contracts using ML models.
 
 You can brainstorm any use cases for bringing ML computation on chain.
 
